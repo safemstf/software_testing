@@ -28,8 +28,11 @@ def test_index_route(client):
 # TASK 1
 def test_weapons_api_status_code(client):
     """Test that the weapons API returns a 200 status code."""
-    pass
-    # Tip - look at test_index_route, use the same template, just change the api endpoint
+     # Send a GET request to the root URL
+    response = client.get('/')
+    # Verify that the response status code is 200 (OK)
+    assert response.status_code == 200
+
 
 
 
